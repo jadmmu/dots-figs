@@ -8,16 +8,14 @@
   },
 
   config = function()
-    ------------------------------------------------------------------
-    -- AUTO-OPEN NEO-TREE (DASHBOARD SAFE, FILE SAFE)
-    ------------------------------------------------------------------
+
     local function open_neotree_if_needed()
-      -- If dashboard (no args), do nothing
+     
       if vim.fn.argc() == 0 then
         return
       end
 
-      -- Open Neo-tree only once
+   
       if vim.g.neotree_opened then
         return
       end
@@ -26,27 +24,22 @@
       vim.cmd("Neotree show")
     end
 
-    -- When opening a project (nvim .)
+
     vim.api.nvim_create_autocmd("VimEnter", {
       callback = open_neotree_if_needed,
     })
 
-    -- When opening a single file (nvim file.cpp)
+
     vim.api.nvim_create_autocmd("BufReadPost", {
       once = true,
       callback = open_neotree_if_needed,
     })
 
-    ------------------------------------------------------------------
-    -- KEYBIND
-    ------------------------------------------------------------------
+ 
     vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", {
       desc = "Toggle file explorer",
     })
 
-    ------------------------------------------------------------------
-    -- NEO-TREE SETUP (VS CODE STYLE)
-    ------------------------------------------------------------------
     require("neo-tree").setup({
       close_if_last_window = true,
       popup_border_style = "rounded",
