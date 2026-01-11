@@ -1,8 +1,8 @@
--- MUST be first
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Lazy.nvim bootstrap
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
