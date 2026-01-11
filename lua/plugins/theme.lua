@@ -19,8 +19,8 @@
           bg1 = "#0f131c",
           fg0 = "#cdd6f4",
 
-          purple = "#8b5cf6",   -- cursed purple
-          cyan = "#2dd4bf",     -- mahito teal
+          purple = "#8b5cf6",   
+          cyan = "#2dd4bf",     
           pink = "#ec4899",
           red = "#ef4444",
           green = "#22c55e",
