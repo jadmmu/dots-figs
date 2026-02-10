@@ -10,9 +10,7 @@
   config = function()
     local dashboard = require("dashboard")
 
-    ------------------------------------------------------------
-    -- NEW PROJECT FUNCTION
-    ------------------------------------------------------------
+
     local function new_cpp_project()
       local name = vim.fn.input("Project name: ")
       if name == "" then
@@ -22,7 +20,7 @@
       local root = vim.fn.getcwd() .. "/" .. name
       vim.fn.mkdir(root .. "/src", "p")
 
-      -- main.cpp
+    
       local main = io.open(root .. "/src/main.cpp", "w")
       main:write([[
 #include <iostream>
@@ -34,7 +32,7 @@ int main() {
 ]])
       main:close()
 
-      -- CMakeLists.txt
+     
       local cmake = io.open(root .. "/CMakeLists.txt", "w")
       cmake:write([[
 cmake_minimum_required(VERSION 3.20)
@@ -49,14 +47,12 @@ add_executable(]] .. name .. [[
 ]])
       cmake:close()
 
-      -- open project
+    
       vim.cmd("cd " .. root)
       vim.cmd("edit src/main.cpp")
     end
 
-    ------------------------------------------------------------
-    -- DASHBOARD SETUP
-    ------------------------------------------------------------
+
     dashboard.setup({
       theme = "doom",
       config = {
