@@ -1,13 +1,6 @@
-﻿-- Mason setup
+﻿
 require("mason").setup()
 
-<<<<<<< HEAD
-
-lspconfig.clangd.setup({
-  cmd = { "clangd", "--background-index" },
-})
-
-=======
 require("mason-lspconfig").setup({
   ensure_installed = {
     "clangd",
@@ -20,10 +13,13 @@ require("mason-lspconfig").setup({
   automatic_installation = true,
 })
 
+
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+
 lspconfig.clangd.setup({
+  cmd = { "clangd", "--background-index" },
   capabilities = capabilities,
 })
 
@@ -47,7 +43,6 @@ lspconfig.bashls.setup({
   capabilities = capabilities,
 })
 
->>>>>>> e597410 (yeah yeah rewrote configs)
 
 lspconfig.lua_ls.setup({
   capabilities = capabilities,

@@ -61,11 +61,7 @@ add_executable(]] .. name .. [[
       theme = "doom",
       config = {
 
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> e597410 (yeah yeah rewrote configs)
         header = {
           "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠻⣿⣿⣿⠟⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
           "⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣟⣿⡿⢀⣾⣷⢠⢿⡇⣰⣿⣷⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿",
@@ -96,7 +92,7 @@ add_executable(]] .. name .. [[
           "        ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝       ",
         },
 
-<<<<<<< HEAD
+
      
 
 center = {
@@ -119,7 +115,7 @@ center = {
     action = "qa",
   },
 },
-=======
+
         center = {
           {
             icon = "󰱼  ",
@@ -146,7 +142,7 @@ center = {
             action = "qa",
           },
         },
->>>>>>> e597410 (yeah yeah rewrote configs)
+
 
    
         footer = {
