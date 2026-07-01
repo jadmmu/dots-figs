@@ -20,3 +20,6 @@ require("options")
 require("lazy").setup("plugins")
 
 require("keymaps")
+
+vim.opt.termguicolors = true
+vim.opt.rtp:append(vim.fn.expand("~/.local/share/nvim/site/pack/themes/start/doki-theme"))

@@ -1,5 +1,4 @@
-﻿
-require("mason").setup()
+﻿require("mason").setup()
 
 require("mason-lspconfig").setup({
   ensure_installed = {
@@ -9,42 +8,21 @@ require("mason-lspconfig").setup({
     "pyright",
     "bashls",
     "lua_ls",
+    "hls",
   },
   automatic_installation = true,
 })
 
 
-local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 
-lspconfig.clangd.setup({
+vim.lsp.config("clangd", {
   cmd = { "clangd", "--background-index" },
   capabilities = capabilities,
 })
 
-
-lspconfig.gopls.setup({
-  capabilities = capabilities,
-})
-
-
-lspconfig.rust_analyzer.setup({
-  capabilities = capabilities,
-})
-
-
-lspconfig.pyright.setup({
-  capabilities = capabilities,
-})
-
-
-lspconfig.bashls.setup({
-  capabilities = capabilities,
-})
-
-
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
   capabilities = capabilities,
   settings = {
     Lua = {
@@ -53,4 +31,21 @@ lspconfig.lua_ls.setup({
       },
     },
   },
+})
+
+
+local default_servers = { "gopls", "rust_analyzer", "pyright", "bashls", "hls" }
+for _, server in ipairs(default_servers) do
+  vim.lsp.config(server, { capabilities = capabilities })
+end
+
+
+vim.lsp.enable({
+  "clangd",
+  "gopls",
+  "rust_analyzer",
+  "pyright",
+  "bashls",
+  "lua_ls",
+  "hls",
 })

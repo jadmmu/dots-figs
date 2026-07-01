@@ -12,6 +12,7 @@ configs.setup({
         "python",
         "bash",
         "lua",
+        "haskell",
     },
 
     auto_install = true,
