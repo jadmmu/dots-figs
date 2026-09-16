@@ -1,0 +1,7 @@
+@import "../colors-waybar.css";
+
+#battery { font-size: 14px; color: @theme-text; }
+#battery.text { font-size: 12px; font-weight: 800; color: @theme-text; }
+#battery.charging, #battery.full, #battery.plugged { color: @theme-success; }
+#battery.text.charging, #battery.text.full, #battery.text.plugged { color: @theme-text; }
+#battery.critical:not(.charging) { color: @theme-danger; }

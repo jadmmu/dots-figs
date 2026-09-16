@@ -1,0 +1,12 @@
+@import "colors-waybar.css";
+
+#cpu, #memory, #disk, #temperature, #network, #mode, #idle_inhibitor {
+  margin: 0 4px;
+  padding: 0;
+  color: @theme-text;
+  background: transparent;
+  font-size: 13px;
+}
+
+#network.disconnected { color: @theme-text-muted; }
+#window { background: transparent; color: @theme-text-muted; }

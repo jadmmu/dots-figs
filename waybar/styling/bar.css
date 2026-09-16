@@ -1,0 +1,30 @@
+@import "colors-waybar.css";
+
+window#waybar {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#workspaces-region,
+#clock-region,
+#status-region {
+  background-color: alpha(@theme-base, 0.9);
+  border: 1px solid alpha(@theme-border-inactive, 0.95);
+  border-radius: 10px;
+}
+
+#workspaces-region {
+  padding: 3px 8px;
+}
+
+#clock-region {
+  padding: 3px 13px;
+}
+
+#status-region {
+  padding: 3px 8px;
+}
+
+window#waybar.hidden { opacity: 0.2; }

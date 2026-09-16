@@ -1,0 +1,4 @@
+@import "../colors-waybar.css";
+
+#privacy-container .text-button { padding: 0 3px; font-size: 13px; color: @theme-text-muted; }
+box#privacy-container { margin: 0; padding: 0 2px; background: transparent; }

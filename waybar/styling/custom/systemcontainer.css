@@ -1,0 +1,11 @@
+@import "../colors-waybar.css";
+
+box#system-container { margin: 0; padding: 0 2px; background: transparent; }
+#backlight, #pulseaudio, #custom-pacman-update { margin: 0 2px; font-size: 13px; color: @theme-text; }
+#battery.text, #backlight.text, #pulseaudio.text, #custom-pacman-update.text {
+  margin: 0 3px;
+  font-size: 12px;
+  font-weight: 800;
+  color: @theme-text;
+}
+#custom-pacman-update.uptodate.text { color: @theme-success; }

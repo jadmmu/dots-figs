@@ -1,0 +1,6 @@
+show=drun
+prompt=
+width=460
+lines=7
+matching=fuzzy
+allow_images=true

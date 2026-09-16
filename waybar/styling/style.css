@@ -1,0 +1,15 @@
+@import "colors-waybar.css";
+@import "workspace.css";
+@import "bar.css";
+@import "general.css";
+@import "stock.css";
+@import "custom/battery.css";
+@import "custom/clock.css";
+@import "custom/privacycontainer.css";
+@import "custom/systemcontainer.css";
+
+* {
+  font-family: "Madness", "JetBrainsMono Nerd Font", "Symbols Nerd Font";
+  font-size: 13px;
+  color: @theme-text;
+}

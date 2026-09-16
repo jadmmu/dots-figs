@@ -1,0 +1,2 @@
+/* Default Waybar stylesheet entry point. The canonical rules live in styling/. */
+@import "styling/style.css";

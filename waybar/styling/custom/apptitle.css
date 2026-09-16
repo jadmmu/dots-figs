@@ -1,0 +1,6 @@
+@import "../colors-waybar.css";
+
+#custom-arrow-dec { margin: 0 5px; font-size: 13px; color: @theme-text-muted; }
+#custom-app-title-icon { font-size: 13px; color: @theme-text; }
+label#custom-app-name { margin: 0 4px; font-size: 12px; color: @theme-text-muted; }
+box#app-title-container { padding: 0 3px; background: transparent; }

@@ -1,0 +1,13 @@
+@import "colors-waybar.css";
+
+label:focus {
+  background-color: @theme-selection-bg;
+  color: @theme-selection-text;
+}
+
+#disk, #temperature, #idle_inhibitor, #language, #keyboard-state { background: transparent; color: @theme-text; }
+#temperature.critical, #tray > .needs-attention { color: @theme-danger; background: transparent; }
+#tray > .passive { -gtk-icon-effect: dim; }
+#idle_inhibitor.activated { color: @theme-selection-text; background: @theme-selection-bg; }
+#mpd, #mpd.disconnected, #mpd.stopped, #mpd.paused { color: @theme-text-muted; }
+#keyboard-state > label.locked { background: alpha(@theme-border-inactive, 0.7); }

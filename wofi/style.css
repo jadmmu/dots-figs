@@ -1,0 +1,51 @@
+@import url("file:///home/jad/.config/wofi/theme-generated.css");
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 14px;
+  color: @theme-text;
+}
+
+window {
+  background-color: alpha(@theme-surface, 0.96);
+  border: 1px solid alpha(@theme-accent-soft, 0.9);
+  border-radius: 11px;
+}
+
+#outer-box { padding: 12px; }
+
+#input {
+  margin: 0 0 9px;
+  padding: 9px 12px;
+  background-color: alpha(@theme-surface-raised, 0.98);
+  border: 1px solid alpha(@theme-border-inactive, 0.9);
+  border-radius: 7px;
+  color: @theme-text;
+}
+
+#input:focus {
+  border-color: alpha(@theme-accent-soft, 0.95);
+  caret-color: @theme-accent-bright;
+}
+
+#input placeholder { color: @theme-text-muted; opacity: 1; }
+
+#scroll, #inner-box { margin: 0; }
+
+#entry {
+  margin: 2px 0;
+  padding: 9px 10px;
+  background: transparent;
+  border-radius: 7px;
+  color: @theme-text;
+}
+
+#entry:selected {
+  background-color: @theme-selection-bg;
+  border: 1px solid alpha(@theme-border-active, 0.7);
+  color: @theme-selection-text;
+}
+
+#text { color: @theme-text; }
+#entry:selected #text { color: @theme-selection-text; }
+#img { margin-right: 10px; min-width: 20px; min-height: 20px; }

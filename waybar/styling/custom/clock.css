@@ -1,0 +1,3 @@
+@import "../colors-waybar.css";
+
+label#clock { font-size: 13px; color: @theme-text; }

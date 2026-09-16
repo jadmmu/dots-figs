@@ -1,0 +1,4 @@
+@import "../colors-waybar.css";
+
+label#custom-dot, label#custom-dot-alt, label#custom-left-arrw { color: @theme-border-inactive; }
+label#custom-left-arrw { margin: 0 4px; font-size: 13px; }
