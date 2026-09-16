@@ -39,4 +39,4 @@ echo "$wallName" > "$wallCache"
 
 sleep 0.5
 "$scripts_dir/wallcache.sh"
-"$scripts_dir/pywal.sh"
+# Theme colors are static and generated from theme/palette.toml.

@@ -38,7 +38,7 @@ fi
 
 "$scripts_dir/notification.sh" sys
 "$scripts_dir/wallcache.sh"
-"$scripts_dir/pywal.sh"
+# Theme colors are static and generated from theme/palette.toml; wallpaper changes do not recolor apps.
 "$scripts_dir/system.sh" run &
 
 
