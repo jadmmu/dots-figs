@@ -11,11 +11,21 @@ FPS=60
 TYPE="any"
 DURATION=2
 BEZIER=".43,1.19,1,.4"
-SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
+AWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
+
+start_awww() {
+    if ! awww query >/dev/null 2>&1; then
+        awww-daemon &
+        for _ in {1..20}; do
+            awww query >/dev/null 2>&1 && return 0
+            sleep 0.05
+        done
+        return 1
+    fi
+}
 
 if [[ -f "$wallpaper" ]]; then
-    swww-daemon &
-    swww img ${wallpaper} $SWWW_PARAMS
+    start_awww && awww img "$wallpaper" $AWWW_PARAMS
 else
     "$scripts_dir/Wallpaper.sh"
 fi
